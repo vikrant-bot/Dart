@@ -1,11 +1,7 @@
 void main() {
-  int n = 5;
-  List<int> numbers = [1, 2, 4, 5];
-  int expectedSum = (n * (n + 1)) ~/ 2;
-  int actualSum = 0;
-  for (int number in numbers) {
-    actualSum += number;
+  int number = 56789;
+  String numberString = number.toString();
+  for (int i = 0; i < numberString.length; i++) {
+    print(numberString[i]);
   }
-  int missingNumber = expectedSum - actualSum;
-  print(missingNumber);
 }
