@@ -1,10 +1,10 @@
 void main() {
-  List<int> numbers = [1, 2, 3, 4, 5, 2];
-  Set<int> uniqueNumbers = Set<int>.from(numbers);
-  
-  if (numbers.length == uniqueNumbers.length) {
-    print('The list does not have any duplicate integers');
-  } else {
-    print('The list has at least one duplicate integer');
+  var a = [1, 2, 4, 5, 6];
+  var count = new List.filled(a.length + 1, 0);
+  for (int i = 0; i < a.length; i++) {
+    count[a[i] - 1]++;
+  }
+  for (int i = 0; i < count.length; i++) {
+    if (count[i] == 0) print(i + 1);
   }
 }
